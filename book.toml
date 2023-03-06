@@ -1,0 +1,6 @@
+[book]
+authors = ["lab-xps-pc"]
+language = "en"
+multilingual = false
+src = "src"
+title = "air-lab-documentation"
