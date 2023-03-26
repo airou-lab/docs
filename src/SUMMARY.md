@@ -12,4 +12,4 @@
 - [LION (Panther Derivation)](lion/README.md)
 	- [Software](lion/software/README.md)
 	- [Hardware](lion/hardware/README.md)
-		- [Components](lion/hardware/components.md)
+		- [Voxl-Flight](lion/hardware/voxl-flight.md)
