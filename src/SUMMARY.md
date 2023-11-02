@@ -6,8 +6,16 @@
 
 - [muSHR Derivation](mushr/README.md)
 	- [Software](mushr/software/README.md)
+		- [Initial Setup & Simulation](mushr/software/initial.md)
+		- [Running The Sensors](mushr/software/sensors.md)
+		- [System Overview](mushr/software/overview.md)
+		- [Using RVIZ](mushr/software/rviz.md)
 	- [Hardware](mushr/hardware/README.md)
-		- [Components](mushr/hardware/components.md)
+		- [Initial Boot-up](mushr/hardware/initial.md)
+		- [Hardware Info](mushr/hardware/onboardHardware.md)
+	- [Misc](mushr/misc/README.md)
+		- [WSL2 Installation](mushr/misc/wslInstall.md)
+		- [BluetoothController](mushr/misc/bluetoothController.md)
 
 - [LION (Panther Derivation)](lion/README.md)
 	- [Software](lion/software/README.md)
