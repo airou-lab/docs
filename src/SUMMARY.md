@@ -17,14 +17,7 @@
 		- [WSL2 Installation](mushr/misc/wslInstall.md)
 		- [BluetoothController](mushr/misc/bluetoothController.md)
 
-<<<<<<< HEAD
-- [LION (Panther Derivation)](lion/README.md)
-	- [Software](lion/software/README.md)
-	- [Hardware](lion/hardware/README.md)
-		- [Voxl-Flight](lion/hardware/voxl-flight.md)
-=======
 - [LIONN (Panther Derivation)](lionn/README.md)
 	- [Software](lionn/software/README.md)
 	- [Hardware](lionn/hardware/README.md)
 		- [Voxl-Flight](lionn/hardware/voxl-flight.md)
->>>>>>> fe477fb (Initial commit for LIONN)
