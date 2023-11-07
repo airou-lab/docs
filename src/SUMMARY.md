@@ -19,6 +19,7 @@
 
 - [LIONN (Panther Derivation)](lionn/README.md)
 	- [Software](lionn/software/README.md)
+		- [Starter Guide](lionn/software/starter.md)
 	- [Hardware](lionn/hardware/README.md)
 		- [VOXL Flight Deck](lionn/hardware/voxl-flight.md)
 		- [Intel NUC](lionn/hardware/nuc.md)
