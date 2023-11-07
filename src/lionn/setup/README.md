@@ -28,3 +28,11 @@ When the signal was sent using one of the above methods, the LED would flash, in
 ## Setup ROS on VOXL
 
 [This guide](https://docs.modalai.com/setup-ros-on-voxl-0_9/) was used to setup ROS on the VOXL.
+
+## Setup NUC
+
+Enable wifi using `nmcli` and connect to the VOXL's wifi network.
+
+[Enable the SSH server on the NUC](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/) and [configure the firewall](https://www.cyberciti.biz/faq/howto-configure-setup-firewall-with-ufw-on-ubuntu-linux/), enabling ssh connections (port 22). Ensure that in the `/etc/ssh/sshd_config` file, `PasswordAuthentication yes` exists as a line.
+
+Now, once connected to the VOXL's wifi network, the developer computer can SSH into both the VOXL and the NUC.
