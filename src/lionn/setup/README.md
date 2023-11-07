@@ -22,3 +22,7 @@ Secondly, when unable to connect the VOXL to QGC, ModalAI provides a [Flight Cor
 In order to ensure the PWM connection was provided to the ESCs in the first place, a simple LED circuit was created and connected to the PWM output for one of the 6 motor outputs on the VOXL's PWM breakout board. The LED's ground pin was connected to the PWM ground, and the positive pin was connected to the PWM's power and signal pins.
 
 When the signal was sent using one of the above methods, the LED would flash, indicating the PWM signal being successfully sent.
+
+## Setup ROS on VOXL
+
+[This guide](https://docs.modalai.com/setup-ros-on-voxl-0_9/) was used to setup ROS on the VOXL.
