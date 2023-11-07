@@ -7,7 +7,7 @@ The [VOXL Developer Bootcamp](https://docs.modalai.com/voxl-developer-bootcamp/)
 
 The latest VOXL image was loaded (see [Software](../software/README.md#operating-systems)) and the `voxl-configure-mpa` script to configure the different services on the VOXL based on the hardware shipped with the VOXL Flight Deck (see [voxl-configure-mpa](https://docs.modalai.com/voxl-configure-mpa/))
 
-## Testing VOXL-Motor connections
+## Testing VOXL Motor connections
 
 Two methods were used to test if the VOXL was able to control the propeller motors.
 
