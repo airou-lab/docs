@@ -1,4 +1,4 @@
-# Starter Guide
+# Accessing the Drone
 
 ## Connecting to the VOXL
 
