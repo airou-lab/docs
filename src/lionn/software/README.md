@@ -30,4 +30,4 @@ The VOXL Flight uses the system image for SDK version `V0.9.5`, loaded onto the 
 The NUC is flashed with the minimized `Ubuntu 22.04 Server` image. This means the NUC is running headless (i.e. without a desktop interface).
 
 ### ROS
-The NUC uses `ROS 2 Iron` while the VOXL's image (see OS section) comes bundled with `ROS Indigo Igloo`. The two versions typically are not compatible, but the two can communicate using the [ROS Bridge](https://docs.ros.org/en/iron/How-To-Guides/Using-ros1_bridge-Jammy-upstream.html).
+The NUC uses `ROS 2 Iron` while the VOXL's image (see OS section) comes bundled with `ROS Indigo`. The two versions typically are not compatible, but the two can communicate using the [ROS Bridge](https://docs.ros.org/en/iron/How-To-Guides/Using-ros1_bridge-Jammy-upstream.html).
