@@ -20,4 +20,5 @@
 - [LIONN (Panther Derivation)](lionn/README.md)
 	- [Software](lionn/software/README.md)
 	- [Hardware](lionn/hardware/README.md)
-		- [Voxl-Flight](lionn/hardware/voxl-flight.md)
+		- [VOXL Flight Deck](lionn/hardware/voxl-flight.md)
+		- [Intel NUC](lionn/hardware/nuc.md)
