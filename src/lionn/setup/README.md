@@ -31,8 +31,18 @@ When the signal was sent using one of the above methods, the LED would flash, in
 
 ## Setup NUC
 
-Enable wifi using `nmcli` and connect to the VOXL's wifi network.
 
+### Network Configuration
 [Enable the SSH server on the NUC](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/) and [configure the firewall](https://www.cyberciti.biz/faq/howto-configure-setup-firewall-with-ufw-on-ubuntu-linux/), enabling ssh connections (port 22). Ensure that in the `/etc/ssh/sshd_config` file, `PasswordAuthentication yes` exists as a line.
 
+Enable wifi using `nmcli` and connect to the VOXL's wifi network.
 Now, once connected to the VOXL's wifi network, the developer computer can SSH into both the VOXL and the NUC.
+
+The NUC and VOXL have instead been configured to network using a wired ethernet adapter. This is donw using the `sudo ip ad add 10.0.0.19/24 dev eth0` command on each device with it's respective IP (see [this guide](https://askubuntu.com/a/116680)). Specifically, they were bound to the following IPs on the wired network:
+
+| Device | Wired IP  | Wireless IP (on VOXL Network) |
+|--------|-----------|-------------------------------|
+|  NUC   | 10.0.0.10 | 192.168.8.1 (Default)         |
+|  VOXL  | 10.0.0.20 | 192.168.8.54                  |
+
+Using these, the VOXL can connect to the NUC and vice versa. As a note, the wireless connection is preferred.
