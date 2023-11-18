@@ -30,7 +30,7 @@ From a separate terminal (either in your base computer or SSH’d into the robot
     rostopic list 
 
 And you should see a series of topics relating to the sensors. 
-![rostopics](../../mushrPhotos/rostopic_list.png)
+![rostopics](../../arcPhotos/rostopic_list.png)
  
 
 > **Note on Sensor topics:**

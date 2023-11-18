@@ -1,8 +1,8 @@
-# muSHR Derivation
+# AirOU Race Cars (ARC)
 
-![muSHR lineup Photo](../mushrPhotos/mushr_lineup.jpg)
+![ARC Lineup](../arcPhotos/arc_lineup.jpg)
 
-Regarding hardware and software information for the MuSHR system, most information and tutorials can be found on the [MuSHR website](https://mushr.io/) 
+Regarding hardware and software information for the ARC system, most information and tutorials can be found on the [MuSHR website](https://mushr.io/) which is the project ARC is derived from.
 
 For any questions or concerns, feel free to reach out to us at:
 

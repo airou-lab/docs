@@ -1,7 +1,7 @@
 # Pairing Bluetooth Controller
 
 ## Introduction 
-Throughout development, the Bluetooth controllers have been notorious for not connecting to the MuSHR cars. If you encounter any troubles, here’s the simplest and fastest way to reconnect the Bluetooth controller. 
+Throughout development, the Bluetooth controllers have been notorious for not connecting to the ARC. If you encounter any troubles, here’s the simplest and fastest way to reconnect the Bluetooth controller. 
 
 ## Steps:
 
@@ -22,7 +22,7 @@ Run the following command to search for available connections:
 2. Put the Bluetooth controller into pairing mode 
 
 Press and hold the PS button and the Share button at the same time until the light bar starts flashing in pairing mode:
-![Pairing Mode](../../mushrPhotos/pairing_mode.png)
+![Pairing Mode](../../arcPhotos/pairing_mode.png)
  
 
 3. Trust, pair, and connect to the Bluetooth controller. 
@@ -34,7 +34,7 @@ When you see "Wireless Controller", copy the MAC addresss and enter:
     connect <MAC Address>
 
 Example:
-![Bluetoothctl Commands](../../mushrPhotos/pair_controller.png)
+![Bluetoothctl Commands](../../arcPhotos/pair_controller.png)
  
 
 After doing such, the light bar should stop flashing and remain a constant white, blue, or purple color at which point the device is connected. 

@@ -96,4 +96,4 @@ In another terminal, launch rviz:
 
 You should now see the simulation 
 
-![Picture of simulation](../../mushrPhotos/mushr_simulation.png)
+![Picture of simulation](../../arcPhotos/arc_simulation.png)
