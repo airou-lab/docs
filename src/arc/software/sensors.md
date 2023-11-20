@@ -1,5 +1,6 @@
 # Running The Sensors
 ## Introduction
+The sensor launch file used in teleoperation can be found in mushr_hardware. 
 
 In this section, I’ll go over how to launch the sensors - both independently and all at the same time - in the scenario where you do not want to enable teleoperation and would just like to configure sensor data. 
 
@@ -45,9 +46,13 @@ Now if you were to open RVIZ from your base computer, you should see a list of t
 >
 > You may not be able to visualize the LiDAR information; in the example below, I show the rgb and depth information from the depth camera. 
 
+![rviz-sensors](../../arcPhotos/rviz_depth_rgb.png)
+
 ## Explaining sensors.launch 
 
 With your text editor of choice, open sensors.launch  located in .../mushr_hardware/launch/racecar-uw-nano/: 
+
+![Sensors file](../../arcPhotos/sensors.png)
  
 
 **Lines 4-6:** we define variables for the roslaunch file

@@ -1,4 +1,6 @@
 # Hardware Info
+![ARC Hardware Information](../../arcPhotos/arc-specs.jpg)
+
 x1 [NVDIA Jetson Nano (4GB)](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/)
 
 ---

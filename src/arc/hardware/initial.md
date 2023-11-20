@@ -21,11 +21,11 @@ Connect to the network named "Robot AP ***robot number***" (Example: Robot AP 3)
 ![Wi-Fi](../../arcPhotos/wifi.png)
 > NOTE:
 > 
-> It may take up to 30 seconds for the network to appear as a possible connetion 
+> It may take up to 30 seconds for the network to appear as a possible connection 
 
 4. **SSH Into The Car:**
 If using WSL, open the Ubuntu 18.04 Terminal
-* [Here's how to download UBuntu if you're using Windows](../misc/wslInstall.md)
+* [Here's how to download Ubuntu if you're using Windows](../misc/wslInstall.md)
 
 ![windows ubuntu terminal](../../arcPhotos/ubuntu_on_windows.png)
 
@@ -51,5 +51,13 @@ To start teleoperation and drive the car manually with the sensors active, enter
 
     roslaunch mushr_base teleop.launch
 
-After awhile (like 15-20 seconds), you should see the the sensors turn on (LiDAR and realsense cameras) and be able to drive it manually.
-* While holding the Deadman's Switch (L1), you can use the left joystick to go forward and backward and the right joystic to steer left or right.
+After awhile (like 15-20 seconds), you should see the sensors turn on (LiDAR and realsense cameras) and be able to drive it manually.
+* While holding the Deadman's Switch (L1), you can use the left joystick to go forward and backward and the right joystick to steer left or right.
+
+## How to shut down the race car:
+1. To shut down the system, press Ctl+C. Allow 10--15 seconds to completely shutdown. 
+
+2. Then in the same terminal run:
+
+    ```sudo shutdown -P now```
+3. Unplug the main battery and VESC battery. Shutdown process is complete.  

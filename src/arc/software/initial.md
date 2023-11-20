@@ -94,6 +94,6 @@ In another terminal, launch rviz:
 
     rviz 
 
-You should now see the simulation 
+You should now see the simulation for the ARC system. 
 
 ![Picture of simulation](../../arcPhotos/arc_simulation.png)
