@@ -24,3 +24,4 @@
 		- [VOXL Flight Deck](lionn/hardware/voxl-flight.md)
 		- [Intel NUC](lionn/hardware/nuc.md)
 	- [Setup Guide](lionn/setup/README.md)
+		- [ROS Setup](lionn/setup/ROS.md)

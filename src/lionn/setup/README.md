@@ -25,10 +25,6 @@ In order to ensure the PWM connection was provided to the ESCs in the first plac
 
 When the signal was sent using one of the above methods, the LED would flash, indicating the PWM signal being successfully sent.
 
-## Setup ROS on VOXL
-
-[This guide](https://docs.modalai.com/setup-ros-on-voxl-0_9/) was used to setup ROS on the VOXL.
-
 ## Setup NUC
 
 
@@ -40,9 +36,13 @@ Now, once connected to the VOXL's wifi network, the developer computer can SSH i
 
 The NUC and VOXL have instead been configured to network using a wired ethernet adapter. This is donw using the `sudo ip ad add 10.0.0.19/24 dev eth0` command on each device with it's respective IP (see [this guide](https://askubuntu.com/a/116680)). Specifically, they were bound to the following IPs on the wired network:
 
-| Device | Wired IP  | Wireless IP (on VOXL Network) |
-|--------|-----------|-------------------------------|
-|  NUC   | 10.0.0.10 | 192.168.8.1 (Default)         |
-|  VOXL  | 10.0.0.20 | 192.168.8.54                  |
+| Device | Wired IP  | Wireless IP (on VOXL Network) | Wireless IP (on Dev hotspot) |
+|--------|-----------|-------------------------------|------------------------------|
+|  NUC   | 10.0.0.10 | (Dynamic)                     | 10.42.0.180 (Dynamic)        |
+|  VOXL  | 10.0.0.20 | 192.168.8.1 (Default)         | 10.42.0.139 (Dynamic)        |
+|  DEV   | N/A       | (Dynamic)                     | 10.42.0.1                    |
 
-Using these, the VOXL can connect to the NUC and vice versa. As a note, the wireless connection is preferred.
+Using these, the VOXL can connect to the NUC and vice versa. As a note, the wired connection is preferred.
+
+---
+Next, [set up ROS on the VOXL and NUC]().
