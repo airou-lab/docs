@@ -6,4 +6,3 @@ This Markdown Book is where one can find all the information regarding AirOU-Lab
 
 **LIONN**: A general autonomous drone development platform, inspired by MIT-ACL's nx with PANTHER software.
 
- This book was built using mdBook. For more information, see the [mdBook Documentation](https://rust-lang.github.io/mdBook/index.html).
