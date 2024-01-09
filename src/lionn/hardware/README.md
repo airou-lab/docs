@@ -1,6 +1,6 @@
 # Hardware
 
-The hardware is based on the MIT Aerospace Control Lab's [nx Platform](https://gitlab.com/mit-acl/fsw/vehicle-builds/nx).
+The hardware is based on the MIT Aerospace Control Lab's [nx Platform](https://gitlab.com/mit-acl/fsw/vehicle-builds/nx). Also see [their list of parts](https://docs.google.com/spreadsheets/d/1Wlv0AggwJEXu4AvRRExc7lY3p_MQ_X4-Evwyve9mzvk/edit#gid=0).
 
 ## Components
 Below is a comprehensive list of the parts used to build the drone platform.
@@ -19,6 +19,8 @@ Below is a comprehensive list of the parts used to build the drone platform.
 |  Power Supply  | Battery (TBD)                        |
 |                | Voltage Step-Up Board                |
 |                | Power Distribution Board ([MATEK XT60 PDB](https://www.amazon.com/MATEK-Distribution-PDB-XT60-Quadcopter-QAV210/dp/B07QPW14KK)) |
+| Remote Control | Receiver (SPM9745 DSMX)              |
+|                | Transmitter/Controller (DXS SPM1010) |
 
 As a note, the parts used from the frame kit are:
 * Central PCB top plate

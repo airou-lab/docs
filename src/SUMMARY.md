@@ -23,5 +23,6 @@
 	- [Hardware](lionn/hardware/README.md)
 		- [VOXL Flight Deck](lionn/hardware/voxl-flight.md)
 		- [Intel NUC](lionn/hardware/nuc.md)
+		- [Remote Control](lionn/hardware/RC.md)
 	- [Setup Guide](lionn/setup/README.md)
 		- [ROS Setup](lionn/setup/ROS.md)

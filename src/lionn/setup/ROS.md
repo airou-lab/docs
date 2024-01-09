@@ -6,10 +6,10 @@
 
 Specifically, the following values were set in the `my_ros_env.sh` on the VOXL:
 
-```bash
-ROS_IP=10.0.0.20                            # VOXL Static IP
-ROS_MASTER_IP=10.0.0.10                     # NUC Static IP
-ROS_MASTER_URI=https://$ROS_MASTER_IP:22222 # ROS URI on NUC
+```sh
+export ROS_IP=10.0.0.20                                # VOXL Static IP
+export ROS_MASTER_IP=10.0.0.10                         # NUC Static IP
+export ROS_MASTER_URI=https://${ROS_MASTER_IP}:11311/  # ROS URI on NUC
 ```
 
 ## Setup ROS on the NUC

@@ -45,4 +45,4 @@ The NUC and VOXL have instead been configured to network using a wired ethernet 
 Using these, the VOXL can connect to the NUC and vice versa. As a note, the wired connection is preferred.
 
 ---
-Next, [set up ROS on the VOXL and NUC]().
+Next, [set up ROS on the VOXL and NUC](ROS.md).
