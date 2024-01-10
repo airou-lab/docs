@@ -1,5 +1,5 @@
 # Setup Guide
-This document details the steps to implement the setup for the LIONN platform.
+This document details the steps to implement the setup for the LIONN platform once the hardware is finished and the software is installed.
 
 ## Setup VOXL
 
@@ -27,22 +27,25 @@ When the signal was sent using one of the above methods, the LED would flash, in
 
 ## Setup NUC
 
-
 ### Network Configuration
 [Enable the SSH server on the NUC](https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/) and [configure the firewall](https://www.cyberciti.biz/faq/howto-configure-setup-firewall-with-ufw-on-ubuntu-linux/), enabling ssh connections (port 22). Ensure that in the `/etc/ssh/sshd_config` file, `PasswordAuthentication yes` exists as a line.
 
 Enable wifi using `nmcli` and connect to the VOXL's wifi network.
 Now, once connected to the VOXL's wifi network, the developer computer can SSH into both the VOXL and the NUC.
 
-The NUC and VOXL have instead been configured to network using a wired ethernet adapter. This is donw using the `sudo ip ad add 10.0.0.19/24 dev eth0` command on each device with it's respective IP (see [this guide](https://askubuntu.com/a/116680)). Specifically, they were bound to the following IPs on the wired network:
+The NUC and VOXL have instead been configured to network using a wired ethernet adapter. This is done using the `sudo ip ad add IP_ADDRESS/24 dev eth0` command on each device with it's respective IP (see [this guide](https://askubuntu.com/a/116680)).
 
-| Device | Wired IP  | Wireless IP (on VOXL Network) | Wireless IP (on Dev hotspot) |
+## Network Summary
+
+The below table summarizes the IPs that each component of the platform uses. The Wired IP is the static IP set above. Currently, the drone is configured to connect to an ad hoc network on our development PC, and the wireless IPs for the devices are in the Dev Hotspot column.
+
+| Device | Wired IP  | Wireless IP (on VOXL Network) | Wireless IP (on DEV Hotspot) |
 |--------|-----------|-------------------------------|------------------------------|
 |  NUC   | 10.0.0.10 | (Dynamic)                     | 10.42.0.180 (Dynamic)        |
 |  VOXL  | 10.0.0.20 | 192.168.8.1 (Default)         | 10.42.0.139 (Dynamic)        |
 |  DEV   | N/A       | (Dynamic)                     | 10.42.0.1                    |
 
-Using these, the VOXL can connect to the NUC and vice versa. As a note, the wired connection is preferred.
+Using these, the VOXL can connect to the NUC and vice versa.
 
 ---
 Next, [set up ROS on the VOXL and NUC](ROS.md).

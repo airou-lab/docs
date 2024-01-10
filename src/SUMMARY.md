@@ -18,11 +18,11 @@
 		- [BluetoothController](arc/misc/bluetoothController.md)
 
 - [Drone Platform (LIONN)](lionn/overview.md)
-	- [Software](lionn/software/overview.md)
-		- [Accessing the Drone](lionn/software/access.md)
 	- [Hardware](lionn/hardware/overview.md)
 		- [VOXL Flight Deck](lionn/hardware/voxl.md)
 		- [Intel NUC](lionn/hardware/nuc.md)
 		- [Remote Control](lionn/hardware/rc.md)
+	- [Software](lionn/software/overview.md)
+		- [Accessing the Drone](lionn/software/access.md)
 	- [Setup Guide](lionn/setup/overview.md)
 		- [ROS Setup](lionn/setup/ros.md)
