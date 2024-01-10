@@ -1,6 +1,6 @@
 # AirOU Race Cars (ARC)
 
-![ARC Lineup](../arcPhotos/arc_lineup.jpg)
+![ARC Lineup](photos/arc_lineup.jpg)
 
 Regarding hardware and software information for the ARC system, most information and tutorials can be found on the [MuSHR website](https://mushr.io/) which is the project ARC is derived from.
 

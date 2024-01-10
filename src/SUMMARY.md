@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](README.md)
+[Introduction](intro.md)
 
 # Projects
 
@@ -17,12 +17,12 @@
 		- [WSL2 Installation](arc/misc/wslInstall.md)
 		- [BluetoothController](arc/misc/bluetoothController.md)
 
-- [LIONN (Panther Derivation)](lionn/README.md)
-	- [Software](lionn/software/README.md)
+- [Drone Platform (LIONN)](lionn/overview.md)
+	- [Software](lionn/software/overview.md)
 		- [Accessing the Drone](lionn/software/access.md)
-	- [Hardware](lionn/hardware/README.md)
-		- [VOXL Flight Deck](lionn/hardware/voxl-flight.md)
+	- [Hardware](lionn/hardware/overview.md)
+		- [VOXL Flight Deck](lionn/hardware/voxl.md)
 		- [Intel NUC](lionn/hardware/nuc.md)
-		- [Remote Control](lionn/hardware/RC.md)
-	- [Setup Guide](lionn/setup/README.md)
-		- [ROS Setup](lionn/setup/ROS.md)
+		- [Remote Control](lionn/hardware/rc.md)
+	- [Setup Guide](lionn/setup/overview.md)
+		- [ROS Setup](lionn/setup/ros.md)

@@ -22,7 +22,7 @@ Run the following command to search for available connections:
 2. Put the Bluetooth controller into pairing mode 
 
 Press and hold the PS button and the Share button at the same time until the light bar starts flashing in pairing mode:
-![Pairing Mode](../../arcPhotos/pairing_mode.png)
+![Pairing Mode](../photos/pairing_mode.png)
  
 
 3. Trust, pair, and connect to the Bluetooth controller. 
@@ -34,7 +34,7 @@ When you see "Wireless Controller", copy the MAC addresss and enter:
     connect <MAC Address>
 
 Example:
-![Bluetoothctl Commands](../../arcPhotos/pair_controller.png)
+![Bluetoothctl Commands](../photos/pair_controller.png)
  
 
 After doing such, the light bar should stop flashing and remain a constant white, blue, or purple color at which point the device is connected. 

@@ -32,7 +32,7 @@ rviz
 ```
 
 You should now see something like this: 
-![rviz on real car](../../arcPhotos/rviz_on_realcar.jpg)  
+![rviz on real car](../photos/rviz_on_realcar.jpg)  
 
 > NOTE: 
 > If you do not, see the same type of map as seen in the picture then you may not have the default mushr rviz configuration. In which case, go to [software install setup](initial.md) and make sure to add rviz.default.
@@ -43,7 +43,7 @@ Click on the add button in the bottom left corner.
 
 This should load a new window which looks like this: 
 
-![add_rviz_topics](../../arcPhotos/add_rviz_topic.jpg)
+![add_rviz_topics](../photos/add_rviz_topic.jpg)
  
 
  
@@ -55,8 +55,8 @@ You’ll want to select:
 
 After which, you should be able to see the camera feed in the bottom left and a depth cloud originating at the car model: 
 
-![depth stream](../../arcPhotos/depth_stream.jpg)
+![depth stream](../photos/depth_stream.jpg)
 
 This picture shows the depth camera rgb and depth image topics: 
-![rgb and depth image](../../arcPhotos/rgb_and_depth-image.png)
+![rgb and depth image](../photos/rgb_and_depth-image.png)
 

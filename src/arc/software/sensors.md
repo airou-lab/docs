@@ -31,7 +31,7 @@ From a separate terminal (either in your base computer or SSH’d into the robot
     rostopic list 
 
 And you should see a series of topics relating to the sensors. 
-![rostopics](../../arcPhotos/rostopic_list.png)
+![rostopics](../photos/rostopic_list.png)
  
 
 > **Note on Sensor topics:**
@@ -46,13 +46,13 @@ Now if you were to open RVIZ from your base computer, you should see a list of t
 >
 > You may not be able to visualize the LiDAR information; in the example below, I show the rgb and depth information from the depth camera. 
 
-![rviz-sensors](../../arcPhotos/rviz_depth_rgb.png)
+![rviz-sensors](../photos/rviz_depth_rgb.png)
 
 ## Explaining sensors.launch 
 
 With your text editor of choice, open sensors.launch  located in .../mushr_hardware/launch/racecar-uw-nano/: 
 
-![Sensors file](../../arcPhotos/sensors.png)
+![Sensors file](../photos/sensors.png)
  
 
 **Lines 4-6:** we define variables for the roslaunch file

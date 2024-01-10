@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "AIROU Documentation"
 
+[build]
+create-missing = false
+
 [output.html]
 edit-url-template = "https://github.com/airou-lab/air-lab-documentation/edit/master/{path}"
 git-repository-url = "https://github.com/airou-lab/air-lab-documentation/"

@@ -1,6 +1,6 @@
 # System Overview
 
-![System Diagram](../../arcPhotos/overview.png)
+![System Diagram](../photos/overview.png)
 
 The main takeaway from this diagram should be that creating your own controller (catkin package) is as simple as subscribing to sensor nodes and publishing to Mux 
 
