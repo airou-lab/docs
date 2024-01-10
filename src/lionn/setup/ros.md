@@ -20,8 +20,8 @@ export ROS_MASTER_URI=https://${ROS_MASTER_IP}:11311/  # ROS URI on NUC
 
 MAVROS is used to send MAVLink commands (i.e. flight commands) from a ROS node to the VOXL's PX4 Flight controller.
 
-First, MAVROS comes preinstalled on the VOXL but the NUC will need to have MAVROS installed.
+First, MAVROS comes preinstalled on the VOXL but the NUC will need to have MAVROS installed ([tutorial](https://docs.px4.io/main/en/ros/mavros_installation.html)). An example program provided by PXY is their [MAVROS Offboard control example](https://docs.px4.io/main/en/ros/mavros_offboard_cpp.html)
 
-ModalAI provide a `mavros_test` node to fly in a figure 8, which can be done using [this tutorial](https://docs.modalai.com/mavros-0_9/).
+ModalAI provide a `mavros_test` node to fly in a figure 8, which can be done using [this tutorial](https://docs.modalai.com/mavros-0_9/). You will also need to build your ROS package before running it ([tutorial](http://wiki.ros.org/catkin/Tutorials/using_a_workspace#With_catkin_make)). 
 
 You may need to [configure the NUC to run the ROS Nodes on boot](https://mshields.name/blog/2022-03-16-running-ros-nodes-on-boot/).
