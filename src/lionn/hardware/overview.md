@@ -16,8 +16,8 @@ Below is a comprehensive list of the parts used to build the drone platform.
 |                | Electronic Speed Controllers (6x [QWinOut 2-4S 30A ESC](https://www.amazon.com/QWinOut-Brushless-Controller-Multicopter-Quadcopter/dp/B07SFLJJQ5?th=1)) |
 |  Computation   | VOXL Flight Deck                     |
 |                | Intel NUC (NUC11PAHi7)               |
-|  Power Supply  | Battery (TBD)                        |
-|                | Voltage Step-Up Board                |
+|  Power Supply  | LiPo Battery ([5200 mAh, 11.1V](https://www.amazon.com/HOOVO-Battery-5200mAh-Helicopter-Airplane/dp/B08V8YCZFF/ref=sr_1_26?))  |
+|                | Voltage Step-Up Board  ([150W DC-DC 19V](https://www.amazon.com/Gowoops-10-32V-Converter-Adjustable-Voltage/dp/B00J1X4XXM/ref=sr_1_26?))              |
 |                | Power Distribution Board ([MATEK XT60 PDB](https://www.amazon.com/MATEK-Distribution-PDB-XT60-Quadcopter-QAV210/dp/B07QPW14KK)) |
 | Remote Control | Receiver (SPM9745 DSMX)              |
 |                | Transmitter/Controller (DXS SPM1010) |
