@@ -1,5 +1,5 @@
 [book]
-authors = ["lab-xps-pc"]
+authors = ["Tyler Roman", "Matthew Carroll"]
 language = "en"
 multilingual = false
 src = "src"
@@ -9,5 +9,5 @@ title = "AIROU Documentation"
 create-missing = false
 
 [output.html]
-edit-url-template = "https://github.com/airou-lab/air-lab-documentation/edit/master/{path}"
-git-repository-url = "https://github.com/airou-lab/air-lab-documentation/"
+edit-url-template = "https://github.com/airou-lab/docs/edit/master/{path}"
+git-repository-url = "https://github.com/airou-lab/docs/"
