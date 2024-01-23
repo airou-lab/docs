@@ -4,7 +4,7 @@ This is a wiki where the documentation for the AIROU Lab lives. The intention is
 This is built using [mdBook](https://rust-lang.github.io/mdBook/index.html), a Rust-based 
 
 Link to Documentation:
-https://airou-lab.github.io/air-lab-documentation/
+https://airou-lab.github.io/docs/
 
 ## Starter Guide
 This documentation is configured to auto-deploy when commits are made to the `main` branch. This is done via GitHub Actions.

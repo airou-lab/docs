@@ -48,4 +48,4 @@ The below table summarizes the IPs that each component of the platform uses. The
 Using these, the VOXL can connect to the NUC and vice versa.
 
 ---
-Next, [set up ROS on the VOXL and NUC](ROS.md).
+Next, [set up ROS on the VOXL and NUC](ros.md).
