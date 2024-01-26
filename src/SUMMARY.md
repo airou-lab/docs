@@ -26,3 +26,5 @@
 		- [Accessing the Drone](lionn/software/access.md)
 	- [Setup Guide](lionn/setup/overview.md)
 		- [ROS Setup](lionn/setup/ros.md)
+
+- [JetBot](jetbot/overview.md)
