@@ -11,7 +11,7 @@ Below is a comprehensive list of the parts used to build the drone platform.
 |                | Custom 3D-Printed Body               |
 |                | Custom 3D-Printed Body-PCB Interface |
 |                | Custom 3D-Printed Legs               | 
-| Motor Assembly | Motors (6x)                          |
+| Motor Assembly | Motors (6x [FLASH HOBBY D2836 1500KV](https://a.co/d/2fDZAUj))                          |
 |                | Propellers (6x)                      |
 |                | Electronic Speed Controllers (6x [QWinOut 2-4S 30A ESC](https://www.amazon.com/QWinOut-Brushless-Controller-Multicopter-Quadcopter/dp/B07SFLJJQ5?th=1)) |
 |  Computation   | VOXL Flight Deck                     |
