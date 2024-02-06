@@ -26,3 +26,8 @@ As a note, the parts used from the frame kit are:
 * Central PCB top plate
 * Central PCB bottom plate
 * Injection moulded arms (x6)
+
+## 3D printing
+A [zip containing the STL files](../stl/AIROU-Drone-STLs.zip) for the project is available for download.
+
+As a note, the landing gear (`Landing Gear.STL`) was printed in flexible TPU and the main base (`Couple Base.STL`) in rigid PETG. The rest was printed in PLA.
