@@ -1,6 +1,6 @@
 # Machine Learning
 
-The AIROU Lab Group has constructed a miniature city which will be used as our training and testing ground for the Final Project.
+The AIROU Lab has constructed a miniature city which will be used as our training and testing ground for the Final Project.
 
 This will be where you collect data to train your model, and where those models will be evaluated at the conclusion of the semester.
 
