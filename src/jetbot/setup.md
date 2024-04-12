@@ -14,6 +14,8 @@ In order to connect to the JetBot, your development machine should be connected 
 
 ### Making your own network
 
+The JetBot kits have a 2.4GHz wifi card included. Your network/hotspot will need to include the 2.4GHz band, not just the 5GHz.
+
 Firstly, your development machine should be connected to a network (preferrably one you control). The easiest way to do this is to configure your machine to transmit an ad-hoc (hotspot) network. See instructions for [Windows](https://support.microsoft.com/en-us/windows/use-your-windows-pc-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85#WindowsVersion=Windows_11), [Mac](https://support.apple.com/guide/mac-help/share-internet-connection-mac-network-users-mchlp1540/mac), or [Ubuntu](https://help.ubuntu.com/stable/ubuntu-help/net-wireless-adhoc.html.en).
 
 By using an ad-hoc network, you can access your JetBot wherever your development machine works. Alternatively, you can connect it to an existing network, like your home network.
@@ -40,7 +42,7 @@ If you are unable to get access to a monitor/keyboard within your development ne
 
 Once your development computer and your JetBot are connected to the same network, you can access the JupyterLab environment. This handy tool is hosted by the JetBot and encapsulates file management, terminal access, and running Python notebooks, all within a web interface, so no need to SSH/SFTP/etc.
 
-Just access the JupyterLab in your browser at `<wlan IP>:8888`, filling in the IP displayed on the JetBot's display (e.g. `10.10.1.1:8888`). The default password for JupyterLab here is also `jetbot`.
+Just access the JupyterLab in your browser at `http://<wlan IP>:8888`, filling in the IP displayed on the JetBot's display (e.g. `http://192.168.1.2:8888`). The default password for JupyterLab here is also `jetbot`.
 
 ### Getting Started
 
