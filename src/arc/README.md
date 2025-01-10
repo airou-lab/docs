@@ -13,7 +13,7 @@ ARCPro Main Components:
 - Intel NUC
 - 2D LiDAR
 -  Intel D435i Depth + RGB Camera
-- Servo Motor (20Kg)Links to an external site.
+- Servo Motor (20Kg)
 -Controller VESC- (50A) 
 
 ## Initial Boot-up: 
