@@ -8,13 +8,12 @@ Our robotic car is designed and built to autonomously navigate unknown areas and
 
 
 ## Onboard Hardware  Specs
-
 ARCPro Main Components: 
-- Intel NUC
-- 2D LiDAR
--  Intel D435i Depth + RGB Camera
-- Servo Motor (20Kg)
--Controller VESC- (50A) 
+- Intel NUC Processor
+- 2D LiDAR (YDLIDAR X4PRO)
+- Intel D435i Depth + RGB Camera
+- Servo Motor
+- Controller VESC
 
 ## Initial Boot-up: 
 You need to follow these steps to turn on the robot. It is very important to keep this order
