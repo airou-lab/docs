@@ -11,7 +11,7 @@ Our robotic car is designed and built to autonomously navigate unknown areas and
 ARCPro Main Components: 
 - Intel NUC Processor
 - 2D LiDAR (YDLIDAR X4PRO)
-- Intel D435i Depth + RGB Camera
+- Intel D435i RGB-D Camera
 - Servo Motor
 - Controller VESC
 
