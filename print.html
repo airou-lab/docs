@@ -1,0 +1,995 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AIROU Documentation</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Projects</li><li class="chapter-item expanded "><a href="arc/index.html"><strong aria-hidden="true">1.</strong> AirOU Race Cars (ARC)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc/software/index.html"><strong aria-hidden="true">1.1.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc/software/initial.html"><strong aria-hidden="true">1.1.1.</strong> Initial Setup & Simulation</a></li><li class="chapter-item expanded "><a href="arc/software/sensors.html"><strong aria-hidden="true">1.1.2.</strong> Running The Sensors</a></li><li class="chapter-item expanded "><a href="arc/software/overview.html"><strong aria-hidden="true">1.1.3.</strong> System Overview</a></li><li class="chapter-item expanded "><a href="arc/software/rviz.html"><strong aria-hidden="true">1.1.4.</strong> Using RVIZ</a></li></ol></li><li class="chapter-item expanded "><a href="arc/hardware/index.html"><strong aria-hidden="true">1.2.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc/hardware/initial.html"><strong aria-hidden="true">1.2.1.</strong> Initial Boot-up</a></li><li class="chapter-item expanded "><a href="arc/hardware/onboardHardware.html"><strong aria-hidden="true">1.2.2.</strong> Hardware Info</a></li></ol></li><li class="chapter-item expanded "><a href="arc/misc/index.html"><strong aria-hidden="true">1.3.</strong> Misc</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="arc/misc/wslInstall.html"><strong aria-hidden="true">1.3.1.</strong> WSL2 Installation</a></li><li class="chapter-item expanded "><a href="arc/misc/bluetoothController.html"><strong aria-hidden="true">1.3.2.</strong> BluetoothController</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="lionn/overview.html"><strong aria-hidden="true">2.</strong> Drone Platform (LIONN)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lionn/hardware/overview.html"><strong aria-hidden="true">2.1.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lionn/hardware/voxl.html"><strong aria-hidden="true">2.1.1.</strong> VOXL Flight Deck</a></li><li class="chapter-item expanded "><a href="lionn/hardware/nuc.html"><strong aria-hidden="true">2.1.2.</strong> Intel NUC</a></li><li class="chapter-item expanded "><a href="lionn/hardware/rc.html"><strong aria-hidden="true">2.1.3.</strong> Remote Control</a></li></ol></li><li class="chapter-item expanded "><a href="lionn/software/overview.html"><strong aria-hidden="true">2.2.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lionn/software/access.html"><strong aria-hidden="true">2.2.1.</strong> Accessing the Drone</a></li></ol></li><li class="chapter-item expanded "><a href="lionn/setup/overview.html"><strong aria-hidden="true">2.3.</strong> Setup Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lionn/setup/ros.html"><strong aria-hidden="true">2.3.1.</strong> ROS Setup</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="jetbot/overview.html"><strong aria-hidden="true">3.</strong> JetBot</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="jetbot/setup.html"><strong aria-hidden="true">3.1.</strong> Setup</a></li><li class="chapter-item expanded "><a href="jetbot/ML.html"><strong aria-hidden="true">3.2.</strong> Machine Learning</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AIROU Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/airou-lab/docs/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<hr />
+<p>This Markdown Book is where one can find all the information regarding AirOU-Lab's Projects.</p>
+<p><strong>ARC</strong>: Inspired by MuSHR, our robotic system ( Airou Race Car) is designed to autonomously navigate unknown areas and create accurate 2D maps of its travelled path. The vehicles are capable of intravehicular and vehicle-to-infrastructure communication. The robots are capable of Visual Navigation, Navigation using LiDAR, and Navigation using Radar.  It can also perform Simultaneous Localization and Mapping using VSLAM and SLAM using LiDAR</p>
+<p><strong>LIONN</strong>: A general autonomous drone development platform, inspired by MIT-ACL's nx with PANTHER software.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="airou-race-cars-pro-arcpro"><a class="header" href="#airou-race-cars-pro-arcpro">AirOU Race Cars Pro (ARCPro)</a></h1>
+<h2 id="arcpro-overview"><a class="header" href="#arcpro-overview">ARCPro Overview:</a></h2>
+<p>Our robotic car is designed and built to autonomously navigate unknown areas and create accurate 2D/3D maps. Also, the vehicles are capable of intra-vehicular and vehicle-to-infrastructure communication. In this tutorial, we will go through the hardware design of ARCPro first. Then the instruction to turn on the cars and hardware setup is explained step-by-step. Lastly, we instruct you to use ARCPro software to launch different sensors (e.g., LiDAR, depth camera).</p>
+<p><img src="arc/photos/arcpro.png" alt="ARCPro Lineup" /></p>
+<h2 id="onboard-hardware--specs"><a class="header" href="#onboard-hardware--specs">Onboard Hardware  Specs</a></h2>
+<p>ARCPro Main Components: </p>
+<ul>
+<li>Intel NUC Processor</li>
+<li>2D LiDAR (YDLIDAR X4PRO)</li>
+<li>Intel D435i RGB-D Camera</li>
+<li>Servo Motor</li>
+<li>Controller VESC</li>
+</ul>
+<h2 id="initial-boot-up"><a class="header" href="#initial-boot-up">Initial Boot-up:</a></h2>
+<p>You need to follow these steps to turn on the robot. It is very important to keep this order</p>
+<p>Plug VESC battery  to VESC  (Front wheels should “lock” when VESC is plugged in and you may hear a sound) 
+Plug NUC battery to power convertor.
+Plugin NUC.
+Turn on the intel NUC by pushing the power button on the front. The NUC will turn on and you will see the lidar on the top starts spinning!</p>
+<ul>
+<li>The connector to connect the VESC battery</li>
+<li>The connector for connecting NUC battery</li>
+<li>After you connect the batteries:</li>
+</ul>
+<p>Note: if the intel NUC does not turn on, please let the class staff know immediately.</p>
+<h2 id="using-car"><a class="header" href="#using-car">Using Car:</a></h2>
+<p>You can connect to the car in three different ways: direct access, remote access using ssh, remote access using Remote Desktop
+Directly connect to the car: you can connect a monitor and keyboard/mouse to the car to get access to the car. You may use a monitor/keyboard/mouse in the lab to connect to the car.
+Connecting to the car remotely:
+You can connect to the car through wifi either using Remote Desktop or by ssh.</p>
+<h2 id="starting-mushr-package"><a class="header" href="#starting-mushr-package">Starting MuSHR Package:</a></h2>
+<p>Mushr is the component responsible for, among other things, controlling the robot. It runs inside a docker container, and generally receives input via bluetooth.</p>
+<ol>
+<li>Once logged in, open a terminal and launch the Mushr docker container using the command <code>mushr_noetic</code></li>
+<li>You will dropped into a container. Run <code>roslaunch mushr_base teleop.launch</code></li>
+<li>This will launch the teleoperations and allow you to control the robot with the bluetooth controller. You can also launch rviz(background the roslaunch command with ctrl + z, then run <code>rviz</code>) to check out a visual representation of the environment, and see the lidar. Make sure to adjust the fixed frame to /car/base_link</li>
+</ol>
+<h2 id="using-controller"><a class="header" href="#using-controller">Using controller:</a></h2>
+<p>After launching teleop, you have to press center button on the Controller the light should start flashing indicating the controller tries to find the robot, after that, it will be constantly on  (if the controller is not connecting, you have to connect the car directly to the monitor and following the steps provided in this page). If the controller does not turn on, it may indicate it does not have enough charge, and you have to recharge it. We provide cables in the cabinet for charging. Please put it back after you finish charging.
+Remember you must press L1 (the Deadman’s switch) to move the robot. The left joystick is for moving back and forth, and the right joystick is for steering.</p>
+<h2 id="starting-the-camera"><a class="header" href="#starting-the-camera">Starting the camera</a></h2>
+<p>The robot uses an Intel Realsense d435i camera that provides RGB, infrared, depth, and IMU(accelerometer and gyroscope) data. This data is used by the other components to build a model of the environment, but it's possible to run the camera components without those other tools. To launch the camera:</p>
+<ol>
+<li>Open a terminal, and run `roslaunch realsense2_camera rs_camera.launch unite_imu_method:=linear_interpolation</li>
+<li>If you'd like to enable the point cloud, add <code>enable_pointcloud:=true</code>(may not be working)</li>
+<li>Open another terminal, and launch Rviz to view the camera output. Set the fixed frame to camera_link, and add topics like /camera/color/image_raw for example.
+Our software is based on MuSHR software packages. For more information, please visit MuSHR tutorialLinks to an external site.</li>
+</ol>
+<h2 id="how-to-shut-down-the-race-car"><a class="header" href="#how-to-shut-down-the-race-car">How to shut down the race car:</a></h2>
+<ol>
+<li>
+<p>To shut down the system, press the power button in NUC. Please do not hold it! Otherwise, it damages the NUC over the time </p>
+</li>
+<li>
+<p>Unplug the NUC cable.</p>
+</li>
+<li>
+<p>Unplug the NUC batter</p>
+</li>
+<li>
+<p>Unplug the VESC battery.</p>
+</li>
+</ol>
+<p>Shutdown process is complete.</p>
+<h2 id="faq-and-common-issues"><a class="header" href="#faq-and-common-issues">FAQ and common issues</a></h2>
+<ul>
+<li>Problem: Mushr is reporting VESC out of sync errors, and the LIDAR won't start.</li>
+<li>The cables for the LIDAR probably need to be swapped. Usually this happens because the LIDAR isn't detected, and sits on the same port as the VESC. Check /dev to see if that's the case. If the symlinks for both the ydlidar and VESC are pointing to the same thing, that's an issue.</li>
+<li>I can't connect to the robot.</li>
+<li>First make sure you are on the campus wifi or ethernet. Try SSH-ing before remote desktop. If SSH doesn't work, connect the robot directly to a monitor via HDMI and check the network connection. You can also try pinging it at its address.</li>
+</ul>
+<h1 id="airou-race-cars-arc"><a class="header" href="#airou-race-cars-arc">AirOU Race Cars (ARC)</a></h1>
+<p><img src="arc/photos/arc_lineup.jpg" alt="ARC Lineup" /></p>
+<p>Regarding hardware and software information for the ARC system, most information and tutorials can be found on the <a href="https://mushr.io/">MuSHR website</a> which is the project ARC is derived from.</p>
+<p>For any questions or concerns, feel free to reach out to us at:</p>
+<p><strong>tyler.m.roman-1@ou.edu (Software) and dvargas88@ou.edu (Hardware &amp; MiniCity)</strong>.</p>
+<p>There is also a forum for MuSHR issues located in their <a href="https://github.com/prl-mushr/mushr/discussions">GitHub organization discussions</a>.</p>
+<h2 id="outside-resources"><a class="header" href="#outside-resources">Outside Resources</a></h2>
+<p>Regarding the software for the MuSHR/ARC system, most information and tutorials can be found on the MuSHR website</p>
+<p>Links to an external site. </p>
+<p>For any questions or concerns, feel free to reach out to Tyler Roman at tyler.m.roman-1@ou.edu. There is also a forum for MuSHR issues located in their GitHub organization discussions</p>
+<p>Links to an external site..</p>
+<p>We recommend at least going through the following tutorials: </p>
+<p><a href="https://mushr.io/tutorials/quickstart/">Quickstart (Legacy)</a>: This will go over getting the MuSHR repo and running the MuSHR simulation. </p>
+<p><a href="https://mushr.io/tutorials/intro-to-ros/">Intro to ROS</a>: As well as providing some basic insight into how ROS works, it also goes over how to create a package and subscribe to and publish to ROS topics in the MuSHR system </p>
+<p><a href="https://mushr.io/tutorials/overview/">General System Overview</a>: Details on the hardware and ROS topics (I highlight key takeaways in the next section) </p>
+<p>For the purposes of documentation, we will only go over methods and information relevant to running the base sensors in ARC system, and anything that might be of resource to a new user </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="software"><a class="header" href="#software">Software</a></h1>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<ol>
+<li><a href="arc/software/initial.html">Initial Setup and Simulation</a></li>
+<li><a href="arc/software/sensors.html">Running The Sensors</a></li>
+<li><a href="arc/software/overview.html">System Overview</a></li>
+<li><a href="arc/software/rviz.html">Using RVIZ</a></li>
+</ol>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<p>In this part, we instruct you how to run the sensors in ARC both in ROS-based simulator and real hardware. Our software is based on MuSHR software packages and MuSHR simulator. For more information, please visit <a href="https://mushr.io/">MuSHR tutorial</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="initial-software--simulation"><a class="header" href="#initial-software--simulation">Initial Software &amp; Simulation</a></h1>
+<h2 id="introduction-2"><a class="header" href="#introduction-2">Introduction</a></h2>
+<p>In this tutorial, we’ll go over the bare necessities you’ll need on your base computer to run the simulation stack. By doing so, you’ll also have access to the utilities for the project like the default RVIZ configuration file. </p>
+<p><strong>Perquisites:</strong></p>
+<ul>
+<li>
+<p>Ubuntu 18.04 dual booted on your machine or Ubuntu 18.04 installed on WSL2 on your Windows Computer.</p>
+<ul>
+<li>
+<p><strong>Note:</strong> Instructions to <a href="arc/software/../misc/wslInstall.html">Install WSL2</a></p>
+</li>
+<li>
+<p><strong>Note:</strong> WSL1 will be more difficult to use since you have to <a href="https://ripon-banik.medium.com/run-x-display-from-wsl-f94791795376">setup graphics rendering</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Python2.7</p>
+<ul>
+<li><strong>Note:</strong> This should be the default version for Ubuntu 18</li>
+</ul>
+</li>
+<li>
+<p><a href="http://wiki.ros.org/melodic/Installation/Ubuntu">ROS Melodic Desktop Full</a></p>
+</li>
+</ul>
+<h2 id="steps"><a class="header" href="#steps">Steps</a></h2>
+<ol>
+<li><strong>Create a catkin_ws directory</strong></li>
+</ol>
+<p>This will create a workspace to house all the code, including the simulations, on your computer. Open your terminal and copy these commands: </p>
+<pre><code>mkdir ~/catkin_ws/src 
+
+cd ~/catkin_ws &amp;&amp; catkin_make 
+
+echo ~/catkin_ws/devel/setup.bash &gt;&gt; ~/.bashrc 
+
+source ~/.bashrc 
+</code></pre>
+<ol start="2">
+<li><strong>Install dependencies</strong></li>
+</ol>
+<p>Before we can copy the code base, we need to make sure that we have some dependencies. Copy and paste these commands into your terminal. </p>
+<p><em>Make sure you have ROS Melodic installed!</em></p>
+<pre><code>sudo apt install git-all  
+
+sudo apt install python-tk 
+
+curl -s https://packagecloud.io/install/repositories/dirk-thomas/vcstool/script.deb.sh | sudo bash 
+sudo apt-get update 
+sudo apt-get install python3-vcstool 
+</code></pre>
+<ol start="3">
+<li><strong>Ensure we have ROS dependencies</strong></li>
+</ol>
+<p>To run the codebase, we need to ensure that we have the proper ROS messages. To install them, copy and paste this into your terminal: </p>
+<pre><code>sudo apt install -y ros-melodic-ackermann-msgs ros-melodic-map-server ros-melodic-serial ros-melodic-urg-node ros-melodic-robot-state-publisher ros-melodic-xacro 
+</code></pre>
+<ol start="4">
+<li><strong>Install Necessary repositories</strong></li>
+</ol>
+<p>From our github repo, download repos.yaml into ~/catkin_ws/src </p>
+<p>Then run:</p>
+<pre><code>vcs import &lt; repos.yaml 
+</code></pre>
+<ol start="5">
+<li><strong>Install rangelibc:</strong></li>
+</ol>
+<p>Rangelibc is a python library used for different implementations of raycasting for 2D occupancy grids. </p>
+<p>Install by running the following commands: </p>
+<pre><code>cd ~/catkin_ws/src/range_libc/pywrapper 
+
+sudo python setup.py install 
+
+cd ~/catkin_ws/src &amp;&amp; rm -rf range_libc 
+</code></pre>
+<ol start="6">
+<li>
+<p><strong>Run catkin_make to build everything</strong></p>
+<p>cd ~/catkin_ws &amp;&amp; catkin_make </p>
+</li>
+</ol>
+<p>Then you’ll want to source the workspace environment, so it's added to your path </p>
+<pre><code>echo 'source /opt/ros/melodic/setup.bash' &gt;&gt; ~/.bashrc 
+echo 'source ~/catkin_ws/devel/setup.bash' &gt;&gt; ~/.bashrc 
+source ~/.bashrc 
+</code></pre>
+<ol start="7">
+<li><strong>Change the default rviz configuration</strong></li>
+</ol>
+<pre><code>cp ~/catkin_ws/src/mushr/mushr_utils/rviz/default.rviz ~/.rviz/
+</code></pre>
+<ol start="7">
+<li><strong>Running the simulation</strong></li>
+</ol>
+<p>In one terminal, launch teleoperation: </p>
+<pre><code>roslaunch mushr_sim teleop.launch 
+</code></pre>
+<p>In another terminal, launch rviz: </p>
+<pre><code>rviz 
+</code></pre>
+<p>You should now see the simulation for the ARC system. </p>
+<p><img src="arc/software/../photos/arc_simulation.png" alt="Picture of simulation" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="running-the-sensors"><a class="header" href="#running-the-sensors">Running The Sensors</a></h1>
+<h2 id="introduction-3"><a class="header" href="#introduction-3">Introduction</a></h2>
+<p>The sensor launch file used in teleoperation can be found in mushr_hardware. </p>
+<p>In this section, I’ll go over how to launch the sensors - both independently and all at the same time - in the scenario where you do not want to enable teleoperation and would just like to configure sensor data. </p>
+<h2 id="steps-1"><a class="header" href="#steps-1">Steps:</a></h2>
+<ol>
+<li><strong>SSH Into Robot</strong></li>
+</ol>
+<p>After turning on the robot and connecting to the WiFi, we first need to SSH into the robot.</p>
+<p>From your base computer run: </p>
+<pre><code>ssh robot@10.42.0.1 
+</code></pre>
+<ol start="2">
+<li><strong>Navigate to the mushr_hardware directory</strong></li>
+</ol>
+<p>The launch file that is executed during teleoperation is located in the mushr_hardware package. To get to the launch file, run the follwing commands: </p>
+<pre><code>roscd mushr_hardware &amp;&amp; cd launch/racecar-uw-nano  
+</code></pre>
+<ol start="3">
+<li><strong>Run sensors.launch</strong></li>
+</ol>
+<p>Run the following command:</p>
+<pre><code>roslaunch sensors.launch racecar_version:=racecar-uw-nano 
+</code></pre>
+<p>From a separate terminal (either in your base computer or SSH’d into the robot) run: </p>
+<pre><code>rostopic list 
+</code></pre>
+<p>And you should see a series of topics relating to the sensors. 
+<img src="arc/software/../photos/rostopic_list.png" alt="rostopics" /></p>
+<blockquote>
+<p><strong>Note on Sensor topics:</strong></p>
+<p>To get any information from the depth camera, look at the topics that contain ../camera/.. </p>
+<ul>
+<li>such as ../camera/depth/image_raw and ../camera/color/image_raw which contains depth information and rgb color data, respectively, for the captured frame. </li>
+</ul>
+</blockquote>
+<p>Now if you were to open RVIZ from your base computer, you should see a list of topics that you can add which relate to the sensors onboard the robot </p>
+<blockquote>
+<p><strong>Note on Sensors in RVIZ:</strong></p>
+<p>You may not be able to visualize the LiDAR information; in the example below, I show the rgb and depth information from the depth camera. </p>
+</blockquote>
+<p><img src="arc/software/../photos/rviz_depth_rgb.png" alt="rviz-sensors" /></p>
+<h2 id="explaining-sensorslaunch"><a class="header" href="#explaining-sensorslaunch">Explaining sensors.launch</a></h2>
+<p>With your text editor of choice, open sensors.launch  located in .../mushr_hardware/launch/racecar-uw-nano/: </p>
+<p><img src="arc/software/../photos/sensors.png" alt="Sensors file" /></p>
+<p><strong>Lines 4-6:</strong> we define variables for the roslaunch file</p>
+<ul>
+<li>
+<p><em><strong>racecar_version:</strong></em> For our purposes this will always be racecar-uw-nano and this used to refer to files relating to this version of the car </p>
+</li>
+<li>
+<p><em><strong>car_name and tf_prefix:</strong></em> This is used to prefix the topic names. You would only want to specify this if you are working with multiple cars and need to differentiate between sensors and topics </p>
+</li>
+</ul>
+<p><strong>Line 8-9:</strong> load a sensors configuration file specific to our racecar version </p>
+<p><strong>Lines 11-18:</strong> launch the sensor nodes which result in sensor data being published: </p>
+<ul>
+<li>
+<p><strong>11-14:</strong> Launch the realsense depth camera with a 10 second delay </p>
+</li>
+<li>
+<p><strong>15-18:</strong> Launch the lidar sensor </p>
+</li>
+</ul>
+<p><strong>Line 20:</strong> launches the push_button on the front of the car. As of right now, the push button has no functionality. </p>
+<blockquote>
+<p><strong>Note on single sensor testing:</strong></p>
+<p>If you want to just launch one sensor, you can refer to the hardware ROS packages.</p>
+<p>For the realsense d435i camera, we run the command: </p>
+<p><code>roslaunch realsense2_camera air_d435i.launch </code></p>
+<p>For the lidar, we run the command: </p>
+<p><code>roslaunch ydlidar lidar.launch</code></p>
+<p>For the t265 tracking camera, we run the command: </p>
+<p><code>roslaunch realsense2_camera rs_t254.launch</code></p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="system-overview"><a class="header" href="#system-overview">System Overview</a></h1>
+<p><img src="arc/software/../photos/overview.png" alt="System Diagram" /></p>
+<p>The main takeaway from this diagram should be that creating your own controller (catkin package) is as simple as subscribing to sensor nodes and publishing to Mux </p>
+<blockquote>
+<p><strong>NOTE:</strong></p>
+<p>For the Ackermann steering commands, there are 4 levels: </p>
+<ul>
+<li>Safety</li>
+<li>teleop </li>
+<li>navigation</li>
+<li>default</li>
+</ul>
+<p>Autonomous drive messages should be published to <strong>/car/mux/ackermann_cmd_mux/input/navigation</strong></p>
+</blockquote>
+<h2 id="notable-packages"><a class="header" href="#notable-packages">Notable Packages:</a></h2>
+<p><em><strong>(Bullet indentations represent depth in file structure)</strong></em></p>
+<p><strong>mushr_sim:</strong> Contains scripts for the simulation </p>
+<p><strong>mushr_base:</strong> Ties all other packages together </p>
+<p><strong>mushr_hardware:</strong> Contains launchfiles for running the car and contains the sensor packages </p>
+<ul>
+<li>
+<p><strong>ylidar:</strong> Contains scripts and launch files for interfacing with the 2D lidar </p>
+</li>
+<li>
+<p><strong>realsense:</strong> Contains scripts and launch files for interfacing with realsense camera sensors (d435i and t265)</p>
+</li>
+<li>
+<p><strong>Vesc:</strong> Contains scripts for interfacing with the vesc </p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="using-rviz"><a class="header" href="#using-rviz">Using RVIZ</a></h1>
+<h2 id="introduction-4"><a class="header" href="#introduction-4">Introduction</a></h2>
+<p>RVIZ is a tool in ROS that can be used to visualize the information coming from the output of your ROS topics. In many cases, this can be a very useful tool for ensuring that the robot's components are working properly. </p>
+<p>In this section, I’ll go over how to visualize information from the LiDAR and real sense camera: </p>
+<blockquote>
+<p>Note: Make sure you’ve configured your ROS environment variables in your .bashrc file which allow you to receive information from the ARC robot </p>
+<p><strong>ROS_MASTER_URI=http://10.42.0.1:11311</strong></p>
+<p><strong>ROS_IP=YOUR-IP</strong></p>
+</blockquote>
+<h2 id="steps-2"><a class="header" href="#steps-2"><strong>Steps:</strong></a></h2>
+<ol>
+<li><strong>SSH into the robot and launch teleop.launch in mushr_base</strong>
+Launch the following commands: </li>
+</ol>
+<pre><code>ssh robot@10.42.0.1 
+roslaunch mushr_base teleop.launch
+</code></pre>
+<p>At this point, you should see a lot of output on the console detailing the startup process as the sensors turn on and topics start publishing data. </p>
+<ol start="2">
+<li><strong>On your base computer, run RVIZ</strong></li>
+</ol>
+<p>In a separate terminal run:</p>
+<pre><code>rviz
+</code></pre>
+<p>You should now see something like this: 
+<img src="arc/software/../photos/rviz_on_realcar.jpg" alt="rviz on real car" /></p>
+<blockquote>
+<p>NOTE: 
+If you do not, see the same type of map as seen in the picture then you may not have the default mushr rviz configuration. In which case, go to <a href="arc/software/initial.html">software install setup</a> and make sure to add rviz.default.</p>
+</blockquote>
+<ol start="3">
+<li><strong>Add a topic: Real Sense d435i RGB camera image and depthcloud</strong></li>
+</ol>
+<p>Click on the add button in the bottom left corner. </p>
+<p>This should load a new window which looks like this: </p>
+<p><img src="arc/software/../photos/add_rviz_topic.jpg" alt="add_rviz_topics" /></p>
+<p>You’ll want to select:</p>
+<ul>
+<li>/car/camera/color/image</li>
+<li>/car/camera/dept/DepthCloud</li>
+<li>/car/camera/dept/image </li>
+</ul>
+<p>After which, you should be able to see the camera feed in the bottom left and a depth cloud originating at the car model: </p>
+<p><img src="arc/software/../photos/depth_stream.jpg" alt="depth stream" /></p>
+<p>This picture shows the depth camera rgb and depth image topics: 
+<img src="arc/software/../photos/rgb_and_depth-image.png" alt="rgb and depth image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
+<h2 id="table-of-contents-1"><a class="header" href="#table-of-contents-1">Table of Contents</a></h2>
+<ol>
+<li><a href="arc/hardware/initial.html">Initial Bootup</a></li>
+<li><a href="arc/hardware/onboardHardware.html">Hardware Specifications</a></li>
+</ol>
+<h2 id="introduction-5"><a class="header" href="#introduction-5">Introduction</a></h2>
+<p>In this section, we talk about how to plugin in the car batteries and how to run teleoperation as well as provide general information pertaining to the hardware on the cars.</p>
+<p>As mentioned, this project is derived from the <a href="https://mushr.io/">muSHR car project</a>. As such, MuSHR has their own documentation and although this documentation should have all you need to get started, we encourage you to check out the work done by the MuSHR team and some of their great tutorials.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="initial-boot-up-1"><a class="header" href="#initial-boot-up-1">Initial Boot-up</a></h1>
+<h2 id="introduction-6"><a class="header" href="#introduction-6">Introduction</a></h2>
+<p>In this tutorial, we will show how to run the robot in teleoperation mode.
+This involves plugging in the batteries, connecting to the robot's network, and launching the teleoperation ROS launch file.</p>
+<h2 id="steps-3"><a class="header" href="#steps-3">Steps</a></h2>
+<ol>
+<li><strong>Plugin The Main Battery:</strong></li>
+</ol>
+<p><img src="arc/hardware/../photos/cpu_plug_in.png" alt="Plugin Main Battery" /></p>
+<ol start="2">
+<li><strong>Plugin The VESC Battery:</strong></li>
+</ol>
+<p><img src="arc/hardware/../photos/vesc_plug_in.png" alt="Plugin Vesc Battery" /></p>
+<p>(Front wheels should “lock” when VESC is plugged in) </p>
+<ol start="3">
+<li><strong>Connect to Robot Wi-Fi Network:</strong></li>
+</ol>
+<p>Connect to the network named &quot;Robot AP <em><strong>robot number</strong></em>&quot; (Example: Robot AP 3)
+<img src="arc/hardware/../photos/wifi.png" alt="Wi-Fi" /></p>
+<blockquote>
+<p>NOTE:</p>
+<p>It may take up to 30 seconds for the network to appear as a possible connection </p>
+</blockquote>
+<ol start="4">
+<li><strong>SSH Into The Car:</strong>
+If using WSL, open the Ubuntu 18.04 Terminal</li>
+</ol>
+<ul>
+<li><a href="arc/hardware/../misc/wslInstall.html">Here's how to download Ubuntu if you're using Windows</a></li>
+</ul>
+<p><img src="arc/hardware/../photos/ubuntu_on_windows.png" alt="windows ubuntu terminal" /></p>
+<p>Or if you're already using a linux OS, just open the bash terminal</p>
+<p>In the terminal, enter the command: </p>
+<pre><code>ssh robot@10.42.0.1 
+</code></pre>
+<p>You should see something like this:
+<img src="arc/hardware/../photos/ssh_example.png" alt="ssh example" /></p>
+<ol start="5">
+<li><strong>Connecting The Bluetooth Controller:</strong></li>
+</ol>
+<p>Press the center button on the PS4 controller to pair</p>
+<ul>
+<li>If it does not connect, <a href="arc/hardware/../misc/bluetoothController.html">see here</a></li>
+</ul>
+<p><img src="arc/hardware/../photos/bluetooth_controller.png" alt="Connecting Bluetooth Controller" /></p>
+<ol start="6">
+<li><strong>Starting Teleoperation:</strong></li>
+</ol>
+<p>To start teleoperation and drive the car manually with the sensors active, enter:</p>
+<pre><code>roslaunch mushr_base teleop.launch
+</code></pre>
+<p>After awhile (like 15-20 seconds), you should see the sensors turn on (LiDAR and realsense cameras) and be able to drive it manually.</p>
+<ul>
+<li>While holding the Deadman's Switch (L1), you can use the left joystick to go forward and backward and the right joystick to steer left or right.</li>
+</ul>
+<h2 id="how-to-shut-down-the-race-car-1"><a class="header" href="#how-to-shut-down-the-race-car-1">How to shut down the race car:</a></h2>
+<ol>
+<li>
+<p>To shut down the system, press Ctl+C. Allow 10--15 seconds to completely shutdown. </p>
+</li>
+<li>
+<p>Then in the same terminal run:</p>
+<p><code>sudo shutdown -P now</code></p>
+</li>
+<li>
+<p>Unplug the main battery and VESC battery. Shutdown process is complete.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hardware-info"><a class="header" href="#hardware-info">Hardware Info</a></h1>
+<p><img src="arc/hardware/../photos/arc-specs.jpg" alt="ARC Hardware Information" /></p>
+<p>x1 <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/">NVDIA Jetson Nano (4GB)</a></p>
+<hr />
+<p>x1 <a href="https://www.ydlidar.com/products/view/5.html">2D LiDAR</a> </p>
+<ul>
+<li>
+<p><strong>Range:</strong> 0.12 – 10m </p>
+</li>
+<li>
+<p><strong>Scan Angle:</strong> 360°</p>
+</li>
+</ul>
+<hr />
+<p>x1 <a href="https://www.intelrealsense.com/depth-camera-d435i/">Intel D435i Depth + RGB Camera</a></p>
+<ul>
+<li>
+<p><strong>Range:</strong> 0.3 – 3 m </p>
+</li>
+<li>
+<p><strong>Depth Field of View (FOV):</strong> 87° × 58° </p>
+</li>
+<li>
+<p><strong>Depth frame rate:</strong> Up to 90 fps </p>
+</li>
+<li>
+<p><strong>RGB sensor FOV (H × V):</strong> 69° × 42°</p>
+</li>
+<li>
+<p><strong>RGB frame rate:</strong> 30 fps </p>
+</li>
+</ul>
+<hr />
+<p>x1 Intel T265 Tracking Camera</p>
+<hr />
+<p>x1 20 Kg Servo Motor </p>
+<hr />
+<p>x1 VESC (50A) </p>
+<hr />
+<p>x1 Brushless Motor</p>
+<ul>
+<li>
+<p><strong>RPM/V:</strong> 5900kV </p>
+</li>
+<li>
+<p><strong>Max RPM:</strong> 50,000</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="misc"><a class="header" href="#misc">Misc</a></h1>
+<h2 id="table-of-contents-2"><a class="header" href="#table-of-contents-2">Table of Contents</a></h2>
+<ol>
+<li><a href="arc/misc/wslInstall.html">WSL2 Installation</a></li>
+<li><a href="arc/misc/bluetoothController.html">Pairing Bluetooth Controller</a></li>
+</ol>
+<h2 id="introduction-7"><a class="header" href="#introduction-7">Introduction</a></h2>
+<p>This section is dedicated to information which does not fit into specific tutorials or general information for the software or hardware. This would be frequently asked questions or troubleshooting for example. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wsl2-installation"><a class="header" href="#wsl2-installation">WSL2 Installation</a></h1>
+<h2 id="introduction-8"><a class="header" href="#introduction-8">Introduction:</a></h2>
+<p>To work with most of the robotic system, you need to have ROS installed on your device and to have ROS, you have to have Ubuntu.
+In this tutorial, we show you how to install Ubuntu on a Windows device so that one can use ROS melodic.</p>
+<h2 id="steps-4"><a class="header" href="#steps-4">Steps</a></h2>
+<ol>
+<li><strong>Open Powershell:</strong>
+Every Windows operating system comes with PowerShell ready to launch. All you do is open windows PowerShell like the following: </li>
+</ol>
+<p><img src="arc/misc/../photos/windows_powershell.png" alt="Powershell Screenshot" /></p>
+<ol start="2">
+<li>
+<p><strong>Install Ubuntu 18.04 for WSL2:</strong>
+Next, you will enter the following command: </p>
+<p>wsl --install -d Ubuntu-18.04 </p>
+</li>
+</ol>
+<p>You will then have Ubuntu 18.04 downloaded onto your computer. Please note this will take a low amount of storage and may take up to 2 minutes.</p>
+<p>The following is an example of what will appear after the command is entered. Note that since I have it already downloaded, nothing will change for me.</p>
+<p><img src="arc/misc/../photos/wsl_install.png" alt="Example of output" /></p>
+<p>After that, you should restart your computer and then you'll have access the UBuntu terminal.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pairing-bluetooth-controller"><a class="header" href="#pairing-bluetooth-controller">Pairing Bluetooth Controller</a></h1>
+<h2 id="introduction-9"><a class="header" href="#introduction-9">Introduction</a></h2>
+<p>Throughout development, the Bluetooth controllers have been notorious for not connecting to the ARC. If you encounter any troubles, here’s the simplest and fastest way to reconnect the Bluetooth controller. </p>
+<h2 id="steps-5"><a class="header" href="#steps-5">Steps:</a></h2>
+<ol>
+<li>Connect to the robot Wi-Fi and SSH into the robot (see <a href="arc/misc/../hardware/initial.html">Initial Boot-Up</a>) </li>
+</ol>
+<p>Next run, the command: </p>
+<pre><code>bluetoothctl 
+</code></pre>
+<blockquote>
+<p>Bluetoothctl is a terminal program that can be used to trust, pair, and connect Bluetooth devices. </p>
+</blockquote>
+<p>Upon running bluetoothctl, you should see a list of currently connect devices
+Run the following command to search for available connections:</p>
+<pre><code>scan on
+</code></pre>
+<ol start="2">
+<li>Put the Bluetooth controller into pairing mode </li>
+</ol>
+<p>Press and hold the PS button and the Share button at the same time until the light bar starts flashing in pairing mode:
+<img src="arc/misc/../photos/pairing_mode.png" alt="Pairing Mode" /></p>
+<ol start="3">
+<li>Trust, pair, and connect to the Bluetooth controller. </li>
+</ol>
+<p>Once you've run <code>scan on</code> you should see a list of devices appear in the terminal.
+When you see &quot;Wireless Controller&quot;, copy the MAC addresss and enter:</p>
+<pre><code>trust &lt;MAC Address&gt;
+connect &lt;MAC Address&gt;
+</code></pre>
+<p>Example:
+<img src="arc/misc/../photos/pair_controller.png" alt="Bluetoothctl Commands" /></p>
+<p>After doing such, the light bar should stop flashing and remain a constant white, blue, or purple color at which point the device is connected. </p>
+<blockquote>
+<p>NOTE: </p>
+<p>If you have any errors, try waiting for the controller to leave pairing mode and then try just pressing the PS button. There’s a chance the device is trusted and ready to be connected but couldn’t do so. </p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lionn-panther-derivation"><a class="header" href="#lionn-panther-derivation">LIONN (Panther Derivation)</a></h1>
+<p><img src="lionn/photos/drone_rough.jpg" alt="Photo of intermediate state of a drone" /></p>
+<p>The LIONN project (Localization/mapping and Implementation Of Neural Networking) is a derivative of the MIT ACL Lab's <a href="https://gitlab.com/mit-acl/fsw/vehicle-builds/nx">nx Drone Platform</a>, combined with their <a href="https://github.com/mit-acl/panther">PANTHER software package</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hardware-1"><a class="header" href="#hardware-1">Hardware</a></h1>
+<p>The hardware is based on the MIT Aerospace Control Lab's <a href="https://gitlab.com/mit-acl/fsw/vehicle-builds/nx">nx Platform</a>. Also see <a href="https://docs.google.com/spreadsheets/d/1Wlv0AggwJEXu4AvRRExc7lY3p_MQ_X4-Evwyve9mzvk/edit#gid=0">their list of parts</a>.</p>
+<h2 id="components"><a class="header" href="#components">Components</a></h2>
+<p>Below is a comprehensive list of the parts used to build the drone platform.</p>
+<div class="table-wrapper"><table><thead><tr><th>Section</th><th>Part Name</th></tr></thead><tbody>
+<tr><td>Frame</td><td>Frame Kit w/ PCB Central Plate (<a href="https://www.littohot.com/products/s550-hexacopter-frame-kit-with-pcb-central-plate-s550pcb">S550 Frame Kit</a>)</td></tr>
+<tr><td></td><td>Custom 3D-Printed Body</td></tr>
+<tr><td></td><td>Custom 3D-Printed Body-PCB Interface</td></tr>
+<tr><td></td><td>Custom 3D-Printed Legs</td></tr>
+<tr><td>Motor Assembly</td><td>Motors (6x <a href="https://a.co/d/2fDZAUj">FLASH HOBBY D2836 1500KV</a>)</td></tr>
+<tr><td></td><td>Propellers (6x)</td></tr>
+<tr><td></td><td>Electronic Speed Controllers (6x <a href="https://www.amazon.com/QWinOut-Brushless-Controller-Multicopter-Quadcopter/dp/B07SFLJJQ5?th=1">QWinOut 2-4S 30A ESC</a>)</td></tr>
+<tr><td>Computation</td><td>VOXL Flight Deck</td></tr>
+<tr><td></td><td>Intel NUC (NUC11PAHi7)</td></tr>
+<tr><td>Power Supply</td><td>LiPo Battery (<a href="https://www.amazon.com/HOOVO-Battery-5200mAh-Helicopter-Airplane/dp/B08V8YCZFF/ref=sr_1_26?">5200 mAh, 11.1V</a>)</td></tr>
+<tr><td></td><td>Voltage Step-Up Board  (<a href="https://www.amazon.com/Gowoops-10-32V-Converter-Adjustable-Voltage/dp/B00J1X4XXM/ref=sr_1_26?">150W DC-DC 19V</a>)</td></tr>
+<tr><td></td><td>Power Distribution Board (<a href="https://www.amazon.com/MATEK-Distribution-PDB-XT60-Quadcopter-QAV210/dp/B07QPW14KK">MATEK XT60 PDB</a>)</td></tr>
+<tr><td>Remote Control</td><td>Receiver (SPM9745 DSMX)</td></tr>
+<tr><td></td><td>Transmitter/Controller (DXS SPM1010)</td></tr>
+</tbody></table>
+</div>
+<p>As a note, the parts used from the frame kit are:</p>
+<ul>
+<li>Central PCB top plate</li>
+<li>Central PCB bottom plate</li>
+<li>Injection moulded arms (x6)</li>
+</ul>
+<h2 id="3d-printing"><a class="header" href="#3d-printing">3D printing</a></h2>
+<p>A <a href="lionn/hardware/../stl/AIROU-Drone-STLs.zip">zip containing the STL files</a> for the project is available for download.</p>
+<p>As a note, the landing gear (<code>Landing Gear.STL</code>) was printed in flexible TPU and the main base (<code>Couple Base.STL</code>) in rigid PETG. The rest was printed in PLA.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="voxl-flight-deck"><a class="header" href="#voxl-flight-deck">VOXL Flight Deck</a></h1>
+<p>We use an all-in-one dev kit provided by ModalAI called the <a href="https://docs.modalai.com/flight-deck/">VOXL Flight Deck</a>.</p>
+<p><img src="lionn/hardware/../photos/flight-deck-cad.png" alt="Flight Deck CAD Model" /></p>
+<p>The main board is the <a href="https://docs.modalai.com/voxl-flight/">Voxl-Flight</a> which contains 2 modules working in tandum:</p>
+<ul>
+<li>VOXL:
+<ul>
+<li>Android Flight Computer</li>
+<li>Wi-Fi Modem + Radio</li>
+</ul>
+</li>
+<li>Flight Core:
+<ul>
+<li>Flight controller running PX4 firmware</li>
+</ul>
+</li>
+</ul>
+<p>The Flight Deck package also includes several other components which are useful:</p>
+<ul>
+<li>Green resin frame
+<ul>
+<li>Vibration dampers</li>
+<li>Cooling fan</li>
+</ul>
+</li>
+<li>4 Cameras
+<ul>
+<li><a href="https://docs.modalai.com/M0015/">Stereo Cameras</a></li>
+<li><a href="https://docs.modalai.com/M0025/">Hi-Res Camera</a></li>
+<li><a href="https://docs.modalai.com/M0014/">Tracking Camera</a></li>
+</ul>
+</li>
+<li>Power module (<a href="https://docs.modalai.com/power-module-v2-datasheet/">Power Module Kit v2</a>)</li>
+<li>PWM Breakout Kit (M0022 board and <a href="https://docs.modalai.com/cable-datasheets/#mcbl-00004">MCBL-00004 cable</a>)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="intel-nuc"><a class="header" href="#intel-nuc">Intel NUC</a></h1>
+<p>The NUC acts as the main processor for the drone.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="remote-control"><a class="header" href="#remote-control">Remote Control</a></h1>
+<p>The VOXL Flight will take a variety of inputs to its <code>J1004</code> RC connector.</p>
+<p>We used a Spektrum receiver connected using the included MCBL-00005 cable to the VOXL's J1004 connector.</p>
+<p>This receiver was then paired with a Spektrum controller and calibrated, both using QGroundControl.</p>
+<p>While the VOXL Starter Guide includes some <a href="https://docs.modalai.com/calibration/">calibration instructions</a>, PX4 also provides an <a href="https://docs.px4.io/main/en/config/radio.html">RC Setup Guide</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="software-1"><a class="header" href="#software-1">Software</a></h1>
+<p>In short, the software stack consists of two devices, the VOXL and the NUC, connected via Ethernet so that ROS can communicate between devices.</p>
+<h2 id="main-software-components"><a class="header" href="#main-software-components">Main Software Components</a></h2>
+<h3 id="px4-platform"><a class="header" href="#px4-platform">PX4 Platform</a></h3>
+<p>The VOXL Flight's software stack is based on the PX4 flight stack. For a beginner guide, see <a href="https://docs.px4.io/main/en/getting_started/px4_basic_concepts.html">this guide by PX4</a>.</p>
+<p>In short, this bundle includes the following</p>
+<ul>
+<li>PX4 Autopilot</li>
+<li>QGroundControl (QGC)</li>
+<li>MAVSDK (communication between QGC and flight controller using MAVLink protocol)</li>
+</ul>
+<h3 id="ros"><a class="header" href="#ros">ROS</a></h3>
+<p>ROS is a flexible software framework to allow different compartmentalized processes for robotics.</p>
+<h3 id="panther"><a class="header" href="#panther">PANTHER</a></h3>
+<p>The Planner software is based on the <a href="https://github.com/mit-acl/panther">MIT-ACL's PANTHER</a>.</p>
+<h2 id="software-versions"><a class="header" href="#software-versions">Software Versions</a></h2>
+<h3 id="operating-systems"><a class="header" href="#operating-systems">Operating Systems</a></h3>
+<p>The VOXL Flight uses the system image for SDK version <code>V0.9.5</code>, loaded onto the VOXL using the <a href="https://docs.modalai.com/flash-system-image/">SDK Upgrade instructions</a>.</p>
+<p>The NUC is flashed with the standard <code>Ubuntu 20.04</code> image.</p>
+<h3 id="ros-1"><a class="header" href="#ros-1">ROS</a></h3>
+<p>The NUC uses <code>ROS Noetic</code> while the VOXL's image (see OS section) comes bundled with <code>ROS Indigo</code>. The two versions are both ROS 1, and as such are generally compatible.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="accessing-the-drone"><a class="header" href="#accessing-the-drone">Accessing the Drone</a></h1>
+<h2 id="connecting-to-the-voxl"><a class="header" href="#connecting-to-the-voxl">Connecting to the VOXL</a></h2>
+<p>ModalAI provides a <a href="https://docs.modalai.com/voxl-developer-bootcamp/">Developer Bootcamp for the VOXL</a> which contains lots of useful information and the basic setup steps we used.</p>
+<p>Developers may connect to the VOXL in one of the following ways, but <a href="lionn/software/access.html#wireless-ssh-via-dev-network">Wireless via DEV Network</a> is currently configured.</p>
+<h3 id="wired-via-microusb-using-adb"><a class="header" href="#wired-via-microusb-using-adb">Wired via microUSB using ADB</a></h3>
+<p>Be sure to connect using the built-in microUSB port, not the USB extension.</p>
+<ol start="0">
+<li>Assure the VOXL is powered on.</li>
+<li>Connect the VOXL and developer machine using microUSB-to-USB-A cable.</li>
+<li>Run <code>adb</code></li>
+</ol>
+<p>For more information, see the <a href="https://docs.modalai.com/setting-up-adb/">VOXL adb setup guide</a>.</p>
+<h3 id="wireless-ssh-via-voxl-network"><a class="header" href="#wireless-ssh-via-voxl-network">Wireless SSH via VOXL Network</a></h3>
+<p>The VOXL can be configured to transmit a wireless network.</p>
+<ol start="0">
+<li>Assure the VOXL is powered on.</li>
+<li>First, connect to the wireless network (named <code>voxl-wifi</code>) using the default password <code>1234567890</code>.</li>
+<li>To SSH into the VOXL, run <code>ssh root@192.168.8.1</code>, providing the default password <code>oelinux123</code>.</li>
+</ol>
+<p>For more information, see the <a href="https://docs.modalai.com/voxl-wifi-setup/">VOXL wifi setup guide</a>.</p>
+<h3 id="wireless-ssh-via-dev-network"><a class="header" href="#wireless-ssh-via-dev-network">Wireless SSH via DEV Network</a></h3>
+<p>The VOXL and NUC are can beconfigured to connect to an existing development network.</p>
+<ol start="0">
+<li>Assure the VOXL, NUC, and development PC are powered on.</li>
+<li>On the development PC, turn on wifi and the broadcast using the Ubuntu Settings GUI.</li>
+<li>On the development PC, SSH into the VOXL using the following BASH command. Ensure you are connecting to the root user.</li>
+</ol>
+<pre><code class="language-bash">ssh root@10.42.0.139
+</code></pre>
+<ol start="3">
+<li>Provide the root password (default <code>oelinux123</code>).</li>
+</ol>
+<p>For more information, see the <a href="https://docs.modalai.com/voxl-wifi-setup/">VOXL wifi setup guide</a>.</p>
+<h3 id="web-interface"><a class="header" href="#web-interface">Web Interface</a></h3>
+<p>The VOXL will transmit a web interface summarizing the VOXL's information and giving camera previews.</p>
+<p>When on the same network as the VOXL (either its own network or a developer network), this web interface can be found at the VOXL's IP address via http in the web browser (e.g. <a href="http://10.42.0.139/">http://10.42.0.139/</a>).</p>
+<p>For more information, see the <a href="https://docs.modalai.com/voxl-portal/">VOXL Portal guide</a></p>
+<h3 id="qgroundcontrol"><a class="header" href="#qgroundcontrol">QGroundControl</a></h3>
+<p>Our development PC is configured to automatically connect to the VOXL whenever the VOXL is connected to its hotspot and QGC is openned.</p>
+<p>You can also connect to QGC via the microUSB extension cord (VOXL usb-jst) plugged into the <a href="https://docs.modalai.com/voxl-flight-datasheet-connectors/#j1006---usb-connector">Flight Core's USB connector</a>. This USB connector doesn't connect to the Linux OS on the VOXL, instead connecting directly to the PX4.</p>
+<p>For more information, see the <a href="https://docs.modalai.com/qgc-wifi/">VOXL QGC connection guide</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="setup-guide"><a class="header" href="#setup-guide">Setup Guide</a></h1>
+<p>This document details the steps to implement the setup for the LIONN platform once the hardware is finished and the software is installed.</p>
+<h2 id="setup-voxl"><a class="header" href="#setup-voxl">Setup VOXL</a></h2>
+<p>The <a href="https://docs.modalai.com/voxl-developer-bootcamp/">VOXL Developer Bootcamp</a> from ModalAI was used to setup the VOXL.</p>
+<p>The latest VOXL image was loaded (see <a href="lionn/setup/../software/README.html#operating-systems">Software</a>) and the <code>voxl-configure-mpa</code> script to configure the different services on the VOXL based on the hardware shipped with the VOXL Flight Deck (see <a href="https://docs.modalai.com/voxl-configure-mpa/">voxl-configure-mpa</a>)</p>
+<h2 id="testing-voxl-motor-connections"><a class="header" href="#testing-voxl-motor-connections">Testing VOXL Motor connections</a></h2>
+<p>Two methods were used to test if the VOXL was able to control the propeller motors.</p>
+<p><em><strong>Ensure the propellers are removed before testing!</strong></em></p>
+<h3 id="generate-a-pwm-signal"><a class="header" href="#generate-a-pwm-signal">Generate a PWM signal</a></h3>
+<p>The main method to test connections is using QGroundControl. Once connected (see <a href="lionn/setup/../software/starter.html#qgroundcontrol">Software Starter Guide &lt; QGroundControl</a>) the QGroundControl app provides configuration for the drone. In the Motor tab, a test slider can be used to power up the motors.</p>
+<p>Secondly, when unable to connect the VOXL to QGC, ModalAI provides a <a href="https://docs.modalai.com/flight-core-pwm-esc-calibration/">Flight Core PWM ESC Calibration script</a> that can be used to bypass QGC.</p>
+<h3 id="test-the-pwm-signal-coming-from-the-voxl"><a class="header" href="#test-the-pwm-signal-coming-from-the-voxl">Test the PWM signal coming from the VOXL</a></h3>
+<p>In order to ensure the PWM connection was provided to the ESCs in the first place, a simple LED circuit was created and connected to the PWM output for one of the 6 motor outputs on the VOXL's PWM breakout board. The LED's ground pin was connected to the PWM ground, and the positive pin was connected to the PWM's power and signal pins.</p>
+<p>When the signal was sent using one of the above methods, the LED would flash, indicating the PWM signal being successfully sent.</p>
+<h2 id="setup-nuc"><a class="header" href="#setup-nuc">Setup NUC</a></h2>
+<h3 id="network-configuration"><a class="header" href="#network-configuration">Network Configuration</a></h3>
+<p><a href="https://www.cyberciti.biz/faq/how-to-install-ssh-on-ubuntu-linux-using-apt-get/">Enable the SSH server on the NUC</a> and <a href="https://www.cyberciti.biz/faq/howto-configure-setup-firewall-with-ufw-on-ubuntu-linux/">configure the firewall</a>, enabling ssh connections (port 22). Ensure that in the <code>/etc/ssh/sshd_config</code> file, <code>PasswordAuthentication yes</code> exists as a line.</p>
+<p>Enable wifi using <code>nmcli</code> and connect to the VOXL's wifi network.
+Now, once connected to the VOXL's wifi network, the developer computer can SSH into both the VOXL and the NUC.</p>
+<p>The NUC and VOXL have instead been configured to network using a wired ethernet adapter. This is done using the <code>sudo ip ad add IP_ADDRESS/24 dev eth0</code> command on each device with it's respective IP (see <a href="https://askubuntu.com/a/116680">this guide</a>).</p>
+<h2 id="network-summary"><a class="header" href="#network-summary">Network Summary</a></h2>
+<p>The below table summarizes the IPs that each component of the platform uses. The Wired IP is the static IP set above. Currently, the drone is configured to connect to an ad hoc network on our development PC, and the wireless IPs for the devices are in the Dev Hotspot column.</p>
+<div class="table-wrapper"><table><thead><tr><th>Device</th><th>Wired IP</th><th>Wireless IP (on VOXL Network)</th><th>Wireless IP (on DEV Hotspot)</th></tr></thead><tbody>
+<tr><td>NUC</td><td>10.0.0.10</td><td>(Dynamic)</td><td>10.42.0.180 (Dynamic)</td></tr>
+<tr><td>VOXL</td><td>10.0.0.20</td><td>192.168.8.1 (Default)</td><td>10.42.0.139 (Dynamic)</td></tr>
+<tr><td>DEV</td><td>N/A</td><td>(Dynamic)</td><td>10.42.0.1</td></tr>
+</tbody></table>
+</div>
+<p>Using these, the VOXL can connect to the NUC and vice versa.</p>
+<p>To test the connection between the two, run <code>ping</code> using the appropriate IP for each client set above.</p>
+<hr />
+<p>Next, <a href="lionn/setup/ros.html">set up ROS on the VOXL and NUC</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="setup-ros"><a class="header" href="#setup-ros">Setup ROS</a></h1>
+<p>Once the drone's networking infrastructure is established, we can set up ROS.</p>
+<h2 id="setup-ros-on-voxl"><a class="header" href="#setup-ros-on-voxl">Setup ROS on VOXL</a></h2>
+<p><a href="https://docs.modalai.com/setup-ros-on-voxl-0_9/">This guide</a> was used to setup ROS on the VOXL.</p>
+<p>Specifically, the following values were set in the <code>my_ros_env.sh</code> on the VOXL:</p>
+<pre><code class="language-sh">export ROS_IP=10.0.0.20                                # VOXL Static IP
+export ROS_MASTER_IP=10.0.0.10                         # NUC Static IP
+export ROS_MASTER_URI=https://${ROS_MASTER_IP}:11311/  # ROS URI on NUC
+</code></pre>
+<h2 id="setup-ros-on-the-nuc"><a class="header" href="#setup-ros-on-the-nuc">Setup ROS on the NUC</a></h2>
+<h2 id="mavros"><a class="header" href="#mavros">MAVROS</a></h2>
+<p>MAVROS is used to send MAVLink commands (i.e. flight commands) from a ROS node to the VOXL's PX4 Flight controller.</p>
+<p>First, MAVROS comes preinstalled on the VOXL but the NUC will need to have MAVROS installed (<a href="https://docs.px4.io/main/en/ros/mavros_installation.html">tutorial</a>). An example program provided by PXY is their <a href="https://docs.px4.io/main/en/ros/mavros_offboard_cpp.html">MAVROS Offboard control example</a></p>
+<p>ModalAI provide a <code>mavros_test</code> node to fly in a figure 8, which can be done using <a href="https://docs.modalai.com/mavros-0_9/">this tutorial</a>. You will also need to build your ROS package before running it (<a href="http://wiki.ros.org/catkin/Tutorials/using_a_workspace#With_catkin_make">tutorial</a>). </p>
+<p>You may need to <a href="https://mshields.name/blog/2022-03-16-running-ros-nodes-on-boot/">configure the NUC to run the ROS Nodes on boot</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="jetbot"><a class="header" href="#jetbot">JetBot</a></h1>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p><img src="jetbot/photos/jetbot.jpg" alt="Small robot with two wheels" /></p>
+<p>A set of 10 Jetbots have been constructed using <a href="https://jetbot.org/master/getting_started.html">Nvidia's guide</a>. They have been flashed with the base JetBot image.</p>
+<p>For software questions, contact Matthew Carroll (<a href="mailto:danielperez@ou.edu">matthewcarroll@ou.edu</a>).</p>
+<p>For hardware questions, contact Phong Nguyen (<a href="mailto:dvargas88@ou.edu">phong.t.nguyen-1@ou.edu</a>).</p>
+<h2 id="cs-5013---artificial-intelligence"><a class="header" href="#cs-5013---artificial-intelligence">CS 5013 - Artificial Intelligence</a></h2>
+<p>For the Final Project of CS 5013 in Spring 2024 at the University of Oklahoma, graduate students will utilize this hardware plaform to implement a machine learning algorithm on their JetBot. They will utilize computer vision to navigate the JetBot via its wide-angle camera.</p>
+<p>For setup instructions for students of CS 5013, continue to <a href="jetbot/setup.html">Setup</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="jetbot-setup"><a class="header" href="#jetbot-setup">JetBot Setup</a></h1>
+<p>Your JetBot is starting with (roughly) the <a href="https://jetbot.org/master/software_setup/sd_card.html">base JetBot image available</a>.</p>
+<h2 id="hardware-overview"><a class="header" href="#hardware-overview">Hardware Overview</a></h2>
+<p>The JetBot can be turned on by using the button on the rear left corner, through the hole in the frame. This will turn on the external power bank, supplying power to the single-board computer (Jetson Nano) and the motor power supply board.</p>
+<p>Other hardware includes a wide-angle camera (with a lens cap 😛), two wheel/motor assemblies and a roller ball. The single-board computer has a wifi card for connectivity, a small display for debug/configuration info, and an SD card holding the storage for the device.</p>
+<h2 id="network-setup"><a class="header" href="#network-setup">Network Setup</a></h2>
+<p>In order to connect to the JetBot, your development machine should be connected to the same network as the JetBot. Continue for instructions to do so.</p>
+<h3 id="making-your-own-network"><a class="header" href="#making-your-own-network">Making your own network</a></h3>
+<p>The JetBot kits have a 2.4GHz wifi card included. Your network/hotspot will need to include the 2.4GHz band, not just the 5GHz.</p>
+<p>Firstly, your development machine should be connected to a network (preferrably one you control). The easiest way to do this is to configure your machine to transmit an ad-hoc (hotspot) network. See instructions for <a href="https://support.microsoft.com/en-us/windows/use-your-windows-pc-as-a-mobile-hotspot-c89b0fad-72d5-41e8-f7ea-406ad9036b85#WindowsVersion=Windows_11">Windows</a>, <a href="https://support.apple.com/guide/mac-help/share-internet-connection-mac-network-users-mchlp1540/mac">Mac</a>, or <a href="https://help.ubuntu.com/stable/ubuntu-help/net-wireless-adhoc.html.en">Ubuntu</a>.</p>
+<p>By using an ad-hoc network, you can access your JetBot wherever your development machine works. Alternatively, you can connect it to an existing network, like your home network.</p>
+<p>Next, you need to connect your JetBot to your network in one of the following ways:</p>
+<h3 id="accessing-the-shell---monitor-and-keyboard-preferred"><a class="header" href="#accessing-the-shell---monitor-and-keyboard-preferred">Accessing the Shell - Monitor and Keyboard (preferred)</a></h3>
+<div class="warning">
+As a note, you can come to the Project Office hours and utilize our monitor/keyboards or access the CS computer lab (Devon Energy Hall 115) if you have contacted the CS department for keycard access.
+</div>
+<p>If you have access to an external monitor and keyboard, you can use it to configure the JetBot to connect to your development network. Simply turn on your JetBot and connect the peripherals to the ports on the robot. This will allow you to access the headless UI (just a console).</p>
+<p>Log in via the default credentials (username/password: <code>jetbot</code>) and utilize <code>nmcli</code> to view nearby networks and connect to yours (<a href="https://askubuntu.com/questions/377687/how-do-i-connect-to-a-wifi-network-using-nmcli">Stack Exchange instructions</a>).</p>
+<p>Ensure your JetBot is connected via the onboard display, which should show an assigned IP beside <code>wlan</code>, showing that your device is connected and has received an IP.</p>
+<h3 id="accessing-the-shell---usb"><a class="header" href="#accessing-the-shell---usb">Accessing the Shell - USB</a></h3>
+<p>If you are unable to get access to a monitor/keyboard within your development network, utilize <a href="https://jetbot.org/master/software_setup/wifi_setup.html">Nvidia's instructions for Wi-Fi Setup</a> with USB Device Mode.</p>
+<h3 id="accessing-jupyterlab"><a class="header" href="#accessing-jupyterlab">Accessing JupyterLab</a></h3>
+<p>Once your development computer and your JetBot are connected to the same network, you can access the JupyterLab environment. This handy tool is hosted by the JetBot and encapsulates file management, terminal access, and running Python notebooks, all within a web interface, so no need to SSH/SFTP/etc.</p>
+<p>Just access the JupyterLab in your browser at <code>http://&lt;wlan IP&gt;:8888</code>, filling in the IP displayed on the JetBot's display (e.g. <code>http://192.168.1.2:8888</code>). The default password for JupyterLab here is also <code>jetbot</code>.</p>
+<h3 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h3>
+<p>Then, you can proceed through some of the Notebooks to get used to utilizing the environment, the basic JetBot API and ensure that you can control the JetBot remotely using your Bluetooth controller (useful for generating training data later, also just pretty fun).</p>
+<p>You can find these notebooks in <code>~/Notebooks/</code>, namely <code>basic_motion.ipynb</code> and <code>teleoperation.ipynb</code>.</p>
+<p>Once you are comfortable with the environment, continue to <a href="jetbot/ML.html">Machine Learning</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="machine-learning"><a class="header" href="#machine-learning">Machine Learning</a></h1>
+<p>The AIROU Lab has constructed a miniature city which will be used as our training and testing ground for the Final Project.</p>
+<p>This will be where you collect data to train your model, and where those models will be evaluated at the conclusion of the semester.</p>
+<p>You will have access to this space a bit later in the semester. For now, if you wish, feel free to explore the other Notebooks pre-loaded in the JetBots, such as <a href="https://jetbot.org/master/examples/collision_avoidance.html"><code>collision_avoidance</code></a>, and train their model on your space at home.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
