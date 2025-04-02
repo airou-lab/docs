@@ -6,9 +6,9 @@
 
 A set of 10 Jetbots have been constructed using [Nvidia's guide](https://jetbot.org/master/getting_started.html). They have been flashed with the base JetBot image.
 
-For software questions, contact Matthew Carroll ([matthewcarroll@ou.edu](mailto:matthewcarroll@ou.edu)).
+For software questions, contact Matthew Carroll ([matthewcarroll@ou.edu](mailto:danielperez@ou.edu)).
 
-For hardware questions, contact Phong Nguyen ([phong.t.nguyen-1@ou.edu](mailto:phong.t.nguyen-1@ou.edu)).
+For hardware questions, contact Phong Nguyen ([phong.t.nguyen-1@ou.edu](mailto:dvargas88@ou.edu)).
 
 ## CS 5013 - Artificial Intelligence
 
